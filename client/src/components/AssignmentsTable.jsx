@@ -7,7 +7,7 @@ function AssignmentTable() {
 
     const fetchData = async () => {
         try {
-            const res = await axios.get('http://localhost:10000/api/project_assignments');
+            const res = await axios.get('http://localhost:5000/api/project_assignments');
             console.log('Fetched Data:', res.data); // Check if data is being fetched
             let shuffled = res.data.sort(() => Math.random() - 0.5); // Shuffle the records randomly
             setData(shuffled); // Update the data with shuffled records
