@@ -16,12 +16,14 @@ router.post('/', async (req, res) => {
         res.status(400).json({ error: err.message });
     }
 });
+
 router.get('/', async (req, res) => {
     try {
         const assignments = await ProjectAssignment.find()
             .populate('employee_id')
-            .populate('project_code') 
-            .sort({ start_date: -1 }); 
+            .populate('project_code')
+            .sort({ _id: -1 }) // HÄR: Senaste tillagda i databasen
+            .limit(5);         // BARA 5 senaste
         res.json(assignments);
     } catch (err) {
         res.status(500).json({ error: err.message });
