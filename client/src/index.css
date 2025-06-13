@@ -1,5 +1,5 @@
 body {
-  background-color: #121212;
+  background-color: #332d2d;
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 2rem;
@@ -13,7 +13,7 @@ h1 {
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #1e1e1e;
+  background-color: #362e2e;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -25,13 +25,13 @@ th, td {
 }
 
 th {
-  background-color: #f01919;
+  background-color: #a02525;
   color: #ffcc00;
   font-weight: bold;
 }
 
 tr:nth-child(even) {
-  background-color: #0857a1;
+  background-color: #64a3de;
 }
 
 tr:hover {

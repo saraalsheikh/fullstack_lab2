@@ -23,6 +23,8 @@ app.use('/api/projects', require('./routes/projects'));
 app.use('/api/project_assignments', require('./routes/projectAssignments'));
 app.use('/api/projects', projectRoutes);
 
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
@@ -46,5 +48,5 @@ app.use((req, res, next) => {
   })
 
 // Start server
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
